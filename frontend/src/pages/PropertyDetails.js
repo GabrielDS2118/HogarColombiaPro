@@ -30,9 +30,16 @@ const PropertyDetails = () => {
             {property.country}
           </div>
         </div>
-        <div className="text-3xl font-semibold text-violet-600">
-          $ {property.price[0]}
-        </div>
+        {property.price.length > 1 ? (
+          <div className="text-3xl font-semibold text-violet-600">
+            <p>Rent: ${property.price[0]} - Sale: ${property.price[1]}</p>
+            <p></p>
+          </div>
+        ) : (
+          <div className="text-3xl font-semibold text-violet-600">
+            <p>{property.business}: ${property.price[0]}</p>
+          </div>
+        )}        
       </div>
       <div className="flex flex-col items-start gap-8 lg:flex-row">
         <div className="max-w-[768px]">
