@@ -12,6 +12,10 @@ const House = ({ house }) => {
           {house.type}
         </div>
 
+        <div className="bg-yellow-500 rounded-full text-white px-3 inline-block">
+          {house.business}
+        </div>
+
         <div className="bg-violet-500 rounded-full text-white px-3 inline-block">
           {house.country}
         </div>
@@ -39,12 +43,16 @@ const House = ({ house }) => {
       </div>
       {house.price.length > 1 ? (
         <div className="text-md font-semibold text-violet-600 mb-4">
-          <p>Rent: ${house.price[0]} - Sale: ${house.price[1]}</p>
+          <p>
+            Rent: ${house.price[0]} - Sale: ${house.price[1]}
+          </p>
           <p></p>
         </div>
       ) : (
         <div className="text-md font-semibold text-violet-600 mb-4">
-          <p>{house.business}: ${house.price[0]}</p>
+          <p>
+            {house.business}: ${house.price[0]}
+          </p>
         </div>
       )}
     </div>

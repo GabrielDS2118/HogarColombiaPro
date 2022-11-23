@@ -9,12 +9,20 @@ export const HouseContext = createContext();
 // provider
 const HouseContextProvider = ({ children }) => {
   const [houses, setHouses] = useState(housesData);
+
   const [country, setCountry] = useState('Location (any)');
   const [countries, setCountries] = useState([]);
+
   const [property, setProperty] = useState('Property type (any)');
   const [properties, setProperties] = useState([]);
+
+  const [business, setBusiness] = useState('Bussines type (any)');
+  const [listBusiness, setListBusiness] = useState([]);
+
   const [price, setPrice] = useState('Price range (any)');
   const [loading, setLoading] = useState(false);
+
+  console.log('Business: ' + business);
 
   useEffect(() => {
     // return all countries
@@ -42,6 +50,15 @@ const HouseContextProvider = ({ children }) => {
     setProperties(uniqueProperties);
   }, []);
 
+  useEffect(() => {
+    const allBussinesType = houses.map((house) => {
+      return house.business;
+    });
+
+    const uniqueBussines = ['Bussines Type (any)', ...new Set(allBussinesType)];
+    setListBusiness(uniqueBussines);
+  }, []);
+
   const handleClick = () => {
     setLoading(true);
     // check the string if includes '(any)'
@@ -59,6 +76,7 @@ const HouseContextProvider = ({ children }) => {
       // all values are selected
       if (
         house.country === country &&
+        house.business === business &&
         house.type === property &&
         housePrice >= minPrice &&
         housePrice <= maxPrice
@@ -66,39 +84,97 @@ const HouseContextProvider = ({ children }) => {
         return house;
       }
       // all values are default
-      if (isDefault(country) && isDefault(property) && isDefault(price)) {
+      if (
+        isDefault(country) &&
+        isDefault(property) &&
+        isDefault(price) &&
+        isDefault(business)
+      ) {
         return house;
       }
       // country is not default
-      if (!isDefault(country) && isDefault(property) && isDefault(price)) {
+      if (
+        !isDefault(country) &&
+        isDefault(property) &&
+        isDefault(price) &&
+        isDefault(business)
+      ) {
         return house.country === country;
       }
       // property is not default
-      if (!isDefault(property) && isDefault(country) && isDefault(price)) {
+      if (
+        !isDefault(property) &&
+        isDefault(country) &&
+        isDefault(price) &&
+        isDefault(business)
+      ) {
         return house.type === property;
       }
+
+      // business is not default
+      if (
+        !isDefault(business) &&
+        isDefault(country) &&
+        isDefault(price) &&
+        isDefault(business)
+      ) {
+        console.log('Hola');
+        return house.business === business;
+      }
       // price is not default
-      if (!isDefault(price) && isDefault(country) && isDefault(property)) {
+      if (
+        !isDefault(price) &&
+        isDefault(country) &&
+        isDefault(property) &&
+        isDefault(business)
+      ) {
         if (housePrice >= minPrice && housePrice <= maxPrice) {
           return house;
         }
       }
       // country and property is not default
-      if (!isDefault(country) && !isDefault(property) && isDefault(price)) {
+      if (
+        !isDefault(country) &&
+        !isDefault(property) &&
+        isDefault(price) &&
+        isDefault(business)
+      ) {
         return house.country === country && house.type === property;
       }
       // country and price is not default
-      if (!isDefault(country) && isDefault(property) && !isDefault(price)) {
+      if (
+        !isDefault(country) &&
+        isDefault(property) &&
+        !isDefault(price) &&
+        isDefault(business)
+      ) {
         if (housePrice >= minPrice && housePrice <= maxPrice) {
           return house.country === country;
         }
       }
       // property and price is not default
-      if (isDefault(country) && !isDefault(property) && !isDefault(price)) {
+      if (
+        isDefault(country) &&
+        !isDefault(property) &&
+        !isDefault(price) &&
+        isDefault(business)
+      ) {
         if (housePrice >= minPrice && housePrice <= maxPrice) {
           return house.type === property;
         }
       }
+
+      // // bussines and price is not default
+      // if (
+      //   isDefault(country) &&
+      //   !isDefault(business) &&
+      //   !isDefault(price) &&
+      //   isDefault(property)
+      // ) {
+      //   if (housePrice >= minPrice && housePrice <= maxPrice) {
+      //     return house.business === business;
+      //   }
+      // }
     });
 
     setTimeout(() => {
@@ -122,6 +198,9 @@ const HouseContextProvider = ({ children }) => {
         setPrice,
         handleClick,
         houses,
+        business,
+        setBusiness,
+        listBusiness,
         loading,
       }}
     >
