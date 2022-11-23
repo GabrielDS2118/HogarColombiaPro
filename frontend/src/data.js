@@ -68,13 +68,22 @@ export const housesData = [
     bathrooms: '2', 
     surface: '48 m3', 
     year: '2009', 
-    price: '192000000',
+    price: ['960000','192000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
-    id: 2, type: 'House', name: 'House 2',
+    id: 2, type: 'House', 
+    name: 'House 2',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-    image: House2, imageLg: House2Lg, country: 'Medellín', address: 'Calle 49 # 64 - 19', bedrooms: '2', bathrooms: '2', surface: '48 m3', year: '2004', price: '192000000',
+    image: House2, 
+    imageLg: House2Lg, 
+    country: 'Medellín', 
+    address: 'Calle 49 # 64 - 19', 
+    bedrooms: '2', 
+    bathrooms: '2', 
+    surface: '48 m3', 
+    year: '2004', 
+    price: ['960000', ''],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -90,7 +99,7 @@ export const housesData = [
     bathrooms: '2', 
     surface: '48 m3', 
     year: '2008', 
-    price: '192000000',
+    price: ['960000', '192000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -105,7 +114,7 @@ export const housesData = [
     bedrooms: '2', bathrooms: '2', 
     surface: '48 m3', 
     year: '1992', 
-    price: '192000000',
+    price: ['960000', '192000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -121,7 +130,7 @@ export const housesData = [
     bathrooms: '1', 
     surface: '42 m3', 
     year: '2009', 
-    price: '168000000',
+    price: ['840000', '168000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -137,7 +146,7 @@ export const housesData = [
     bathrooms: '1', 
     surface: '60 m3', 
     year: '2009', 
-    price: '240000000',
+    price: ['1200000', '240000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -153,7 +162,7 @@ export const housesData = [
     bathrooms: '2', 
     surface: '66 m3', 
     year: '1995', 
-    price: '264000000',
+    price: ['1320000', '264000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -169,7 +178,7 @@ export const housesData = [
     bathrooms: '2', 
     surface: '48 m3', 
     year: '1992', 
-    price: '192000000', 
+    price: ['960000', '192000000'], 
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -185,7 +194,7 @@ export const housesData = [
     bathrooms: '2', 
     surface: '48 m3', 
     year: '1995', 
-    price: '192000000',
+    price: ['960000', '192000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -201,7 +210,7 @@ export const housesData = [
     bathrooms: '2', 
     surface: '84 m3', 
     year: '2016', 
-    price: '336000000',
+    price: ['1680000', '336000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -217,7 +226,7 @@ export const housesData = [
     bathrooms: '2', 
     surface: '48 m3', 
     year: '2002', 
-    price: '192000000',
+    price: ['960000', '192000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -233,7 +242,7 @@ export const housesData = [
     bathrooms: '1', 
     surface: '42 m3', 
     year: '2021', 
-    price: '168000000',
+    price: ['840000', '168000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -249,7 +258,7 @@ export const housesData = [
     bathrooms: '2', 
     surface: '66 m3', 
     year: '1993', 
-    price: '264000000',
+    price: ['1320000', '264000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -265,7 +274,7 @@ export const housesData = [
     bathrooms: '1', 
     surface: '60 m3', 
     year: '2015', 
-    price: '240000000',
+    price: ['1200000', '240000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -281,7 +290,7 @@ export const housesData = [
     bathrooms: '2', 
     surface: '66 m3', 
     year: '1994', 
-    price: '264000000',
+    price: ['1320000', '264000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -297,7 +306,7 @@ export const housesData = [
     bathrooms: '1', 
     surface: '42 m3', 
     year: '1996', 
-    price: '168000000',
+    price: ['840000', '168000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -313,7 +322,7 @@ export const housesData = [
     bathrooms: '1', 
     surface: '42 m3', 
     year: '2005', 
-    price: '168000000',
+    price: ['840000', '168000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -329,7 +338,7 @@ export const housesData = [
     bathrooms: '2', 
     surface: '48 m3', 
     year: '2011', 
-    price: '192000000',
+    price: ['960000', '192000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -345,7 +354,7 @@ export const housesData = [
     bathrooms: '2', 
     surface: '48 m3', 
     year: '2012', 
-    price: '192000000',
+    price: ['960000', '192000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -361,7 +370,7 @@ export const housesData = [
     bathrooms: '2', 
     surface: '84 m3', 
     year: '2003', 
-    price: '336000000',
+    price: ['1680000', '336000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -377,7 +386,7 @@ export const housesData = [
     bathrooms: '1', 
     surface: '78 m3', 
     year: '2016', 
-    price: '312000000',
+    price: ['1560000', '312000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -393,7 +402,7 @@ export const housesData = [
     bathrooms: '1', 
     surface: '60 m3', 
     year: '2022', 
-    price: '240000000',
+    price: ['1200000', '240000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -409,7 +418,7 @@ export const housesData = [
     bathrooms: '1', 
     surface: '60 m3', 
     year: '1997', 
-    price: '240000000',
+    price: ['1200000', '240000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -425,7 +434,7 @@ export const housesData = [
     bathrooms: '1', 
     surface: '24 m3', 
     year: '1995', 
-    price: '96000000',
+    price: ['480000', '96000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -441,7 +450,7 @@ export const housesData = [
     bathrooms: '1', 
     surface: '78 m3', 
     year: '2019', 
-    price: '312000000',
+    price: ['1560000', '312000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -457,7 +466,7 @@ export const housesData = [
     bathrooms: '2', 
     surface: '48 m3', 
     year: '1997', 
-    price: '192000000',
+    price: ['960000', '192000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -473,7 +482,7 @@ export const housesData = [
     bathrooms: '1', 
     surface: '60 m3', 
     year: '2021', 
-    price: '240000000',
+    price: ['1200000', '240000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -489,7 +498,7 @@ export const housesData = [
     bathrooms: '2', 
     surface: '84 m3', 
     year: '2021', 
-    price: '336000000',
+    price: ['1680000', '336000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -505,7 +514,7 @@ export const housesData = [
     bathrooms: '2', 
     surface: '66 m3', 
     year: '1997', 
-    price: '264000000',
+    price: ['1320000', '264000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -521,7 +530,7 @@ export const housesData = [
     bathrooms: '1', 
     surface: '42 m3', 
     year: '2019', 
-    price: '168000000',
+    price: ['840000', '168000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -537,7 +546,7 @@ export const housesData = [
     bathrooms: '1', 
     surface: '42 m3', 
     year: '2014', 
-    price: '168000000',
+    price: ['840000', '168000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -553,7 +562,7 @@ export const housesData = [
     bathrooms: '1', 
     surface: '60 m3', 
     year: '2010', 
-    price: '240000000',
+    price: ['1200000', '240000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   {
@@ -569,7 +578,7 @@ export const housesData = [
     bathrooms: '2', 
     surface: '66 m3', 
     year: '2012', 
-    price: '264000000',
+    price: ['1320000', '264000000'],
     agent: { image: Agent1, name: 'Patricia Tullert', phone: '0123 456 78910', },
   },
   /*{
