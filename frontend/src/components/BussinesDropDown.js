@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 // import icons
-import { RiMapPinLine, RiArrowDownSLine, RiArrowUpSLine } from 'react-icons/ri';
+import { RiKey2Line, RiArrowDownSLine, RiArrowUpSLine } from 'react-icons/ri';
 // import headless ui components
 import { Menu } from '@headlessui/react';
 // import context
@@ -17,12 +17,10 @@ const BussinesDropDown = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="dropdown-btn w-full text-left"
       >
-        <RiMapPinLine className="dropdown-icon-primary" />
+        <RiKey2Line className="dropdown-icon-primary" />
         <div>
-          <div className="text-[15px] font-medium leading-tight">
-            {business}
-          </div>
-          <div className="text-[13px]">Select your bussine</div>
+          <div className="text-[12px] font-medium leading-tight">{business}</div>
+          <div className="text-[10px]">Select your business</div>
         </div>
         {isOpen ? (
           <RiArrowUpSLine className="dropdown-icon-secondary" />
