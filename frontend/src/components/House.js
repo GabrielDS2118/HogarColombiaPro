@@ -41,17 +41,15 @@ const House = ({ house }) => {
           <div className="text-base">{house.surface}</div>
         </div>
       </div>
-      {house.price.length > 1 ? (
+      {house.priceSecond === 'nan' ? (
         <div className="text-md font-semibold text-violet-600 mb-4">
-          <p>
-            Rent: ${house.price[0]} - Sale: ${house.price[1]}
-          </p>
+          <p>${house.price}</p>
           <p></p>
         </div>
       ) : (
-        <div className="text-md font-semibold text-violet-600 mb-4">
+        <div className="text-sm font-semibold text-violet-600 mb-4">
           <p>
-            {house.business}: ${house.price[0]}
+            Rent: ${house.price} - Sale: ${house.priceSecond}
           </p>
         </div>
       )}

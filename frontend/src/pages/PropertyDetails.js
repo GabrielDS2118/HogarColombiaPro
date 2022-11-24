@@ -1,7 +1,8 @@
 import React from 'react';
 
 // import houseData
-import { housesData } from '../data';
+// import { housesData } from '../data';
+import useData from '../hooks/fetchApi';
 //  useParams
 import { useParams } from 'react-router-dom';
 // import icons
@@ -10,6 +11,7 @@ import { BiBed, BiBath, BiArea, BiPhone } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 
 const PropertyDetails = () => {
+  const housesData = useData('http://localhost:5000/api/inmuebles/');
   const { id } = useParams();
   const property = housesData.find((house) => {
     return house.id === parseInt(id);
@@ -32,14 +34,18 @@ const PropertyDetails = () => {
         </div>
         {property.price.length > 1 ? (
           <div className="text-3xl font-semibold text-violet-600">
-            <p>Rent: ${property.price[0]} - Sale: ${property.price[1]}</p>
+            <p>
+              Rent: ${property.price[0]} - Sale: ${property.price[1]}
+            </p>
             <p></p>
           </div>
         ) : (
           <div className="text-3xl font-semibold text-violet-600">
-            <p>{property.business}: ${property.price[0]}</p>
+            <p>
+              {property.business}: ${property.price[0]}
+            </p>
           </div>
-        )}        
+        )}
       </div>
       <div className="flex flex-col items-start gap-8 lg:flex-row">
         <div className="max-w-[768px]">

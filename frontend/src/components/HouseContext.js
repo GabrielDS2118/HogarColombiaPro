@@ -1,13 +1,14 @@
 import React, { createContext, useState, useEffect } from 'react';
+import useData from '../hooks/fetchApi';
 
 // import data
-import { housesData } from '../data';
 
 // create context
 export const HouseContext = createContext();
 
 // provider
 const HouseContextProvider = ({ children }) => {
+  const housesData = useData('http://localhost:5000/api/inmuebles/');
   const [houses, setHouses] = useState(housesData);
 
   const [country, setCountry] = useState('Location (any)');
