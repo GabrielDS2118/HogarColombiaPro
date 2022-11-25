@@ -6,6 +6,7 @@ const inmuebleSchema = new mongoose.Schema({
   name: { type: String, require: true },
   description: { type: String, require: true },
   image: { type: String, require: true },
+  imagelg: { type: String, require: true },
   country: { type: String, require: true },
   address: { type: String, require: true },
   bedrooms: { type: String, require: true },

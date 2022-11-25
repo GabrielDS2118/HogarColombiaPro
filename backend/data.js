@@ -9,6 +9,7 @@ const data = {
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
       image: '/img/inmuebles/houses/house1.png',
+      imagelg: '/img/inmuebles/houses/house1lg.png',
       country: 'Medellín',
       address: 'Calle 49 # 64 - 19',
       bedrooms: '2',
