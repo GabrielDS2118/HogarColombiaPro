@@ -9,8 +9,6 @@ import { HouseContext } from './HouseContext';
 const BussinesDropDown = () => {
   const { business, setBusiness, listBusiness } = useContext(HouseContext);
   const [isOpen, setIsOpen] = useState(false);
-  console.log(listBusiness);
-  console.log(business);
   return (
     <Menu as="div" className="dropdown relative">
       <Menu.Button
@@ -19,7 +17,9 @@ const BussinesDropDown = () => {
       >
         <RiKey2Line className="dropdown-icon-primary" />
         <div>
-          <div className="text-[12px] font-medium leading-tight">{business}</div>
+          <div className="text-[12px] font-medium leading-tight">
+            {business}
+          </div>
           <div className="text-[10px]">Select your business</div>
         </div>
         {isOpen ? (

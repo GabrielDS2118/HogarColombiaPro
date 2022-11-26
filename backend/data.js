@@ -442,7 +442,7 @@ const data = {
       bathrooms: '2',
       surface: '84 m3',
       year: '2021',
-      price: ['1680000'],
+      price: ['961000'],
     },
     {
       type: 'House',

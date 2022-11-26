@@ -11,10 +11,10 @@ import { Link } from 'react-router-dom';
 import { ImSpinner2 } from 'react-icons/im';
 
 const HouseList = () => {
-  const { loading } = useContext(HouseContext);
+  const { loading, houses } = useContext(HouseContext);
 
-  const houses = useData('http://localhost:5000/api/inmuebles/');
-  console.log('Casas' + houses);
+  // const houses = useData('http://localhost:5000/api/inmuebles/');
+  // console.log('Casas' + houses);
 
   if (loading) {
     return (
