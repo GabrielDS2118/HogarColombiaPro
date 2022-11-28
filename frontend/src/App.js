@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Login from './components/Login';
 import AboutUs from './components/AboutUs';
 import SignUp from './components/SignUp';
+import Ejemplo from './pages/Ejemplo';
 
 // import pages
 import Home from './pages/Home';
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/property/:id" element={<PropertyDetails />} />
+        <Route path="/ejemplo" element={<Ejemplo />}></Route>
       </Routes>
       <Footer />
     </div>

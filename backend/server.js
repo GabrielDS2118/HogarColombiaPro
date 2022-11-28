@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import seedRouter from './routes/seedRoutes.js';
 import inmuebleRouter from './routes/inmueblesRouter.js';
 import agenteRouter from './routes/agentesRouter..js';
+import userRouter from './routes/usersRouter.js';
 
 import dotenv from 'dotenv';
 
@@ -40,6 +41,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/generate', seedRouter);
 app.use('/api/inmuebles', inmuebleRouter);
 app.use('/api/agentes', agenteRouter);
+app.use('/api/users', userRouter);
 
 app.get('/', (req, res) => {
   res.send('Hola HC');

@@ -23,6 +23,8 @@ const HouseContextProvider = ({ children }) => {
 
   const [price, setPrice] = useState('ASC');
 
+  const [user, setUser] = useState();
+
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -102,6 +104,8 @@ const HouseContextProvider = ({ children }) => {
         setUrl,
         setHouses,
         loading,
+        user,
+        setUser,
       }}
     >
       {children}

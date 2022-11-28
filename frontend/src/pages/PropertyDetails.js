@@ -1,13 +1,15 @@
 import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import useData from '../hooks/fetchApi';
+import { useNavigate } from 'react-router-dom';
+// import useData from '../hooks/fetchApi';
 import { useParams } from 'react-router-dom';
 import { BiBed, BiBath, BiArea, BiPhone } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import { ImSpinner2 } from 'react-icons/im';
 
 const PropertyDetails = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [property, setProperty] = useState();
 
@@ -21,6 +23,10 @@ const PropertyDetails = () => {
         console.log(err);
       });
   }, []);
+
+  const checkoutHandler = () => {
+    navigate('/login?redirect=/ejemplo');
+  };
 
   // const property = useData(`http://localhost:5000/api/inmuebles/${id}`);
 
@@ -120,6 +126,7 @@ const PropertyDetails = () => {
                   <button
                     className="bg-violet-700 hover:bg-violet-800 text-white rounded p-4 text-sm w-full transition"
                     type="submit"
+                    onClick={checkoutHandler}
                   >
                     Send message
                   </button>
